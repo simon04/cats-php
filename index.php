@@ -18,8 +18,7 @@ define('NS_CATEGORY', 14);
 class CategoryLister {
 
   public function __construct($lang, $type) {
-    $ts_pw = posix_getpwuid(posix_getuid());
-    $ts_mycnf = parse_ini_file($ts_pw['dir'] . "/replica.my.cnf");
+    $ts_mycnf = parse_ini_file(__DIR__ . "/../replica.my.cnf");
     $this->db = new PDO("mysql:host={$lang}wiki.labsdb;dbname={$lang}wiki_p",
       $ts_mycnf['user'], $ts_mycnf['password']);
     $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
