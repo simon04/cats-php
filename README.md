@@ -1,4 +1,4 @@
 Lightweight Category Scanner
 ============================
 
-https://tools.wmflabs.org/cats-php/
+https://cats-php.toolforge.org/
