@@ -47,7 +47,10 @@ class CategoryLister {
 
 if (!$_REQUEST['lang'] || !$_REQUEST['cat']) {
   header('HTTP/1.1 400');
+  header('Content-Type: text/plain; charset=utf-8');
+  echo "HTTP 400 Bad Request\n\n";
   echo "Lightweight Category Scanner by simon04 (licensed GPL 3)\n";
+  echo "https://github.com/simon04/cats-php\n";
   echo "Required parameters: lang, cat\n";
   echo "Optional parameters: type (0 for NS_MAIN, 6 for NS_FILE), depth, json=1";
   exit();
